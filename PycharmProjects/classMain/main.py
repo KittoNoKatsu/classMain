@@ -17,13 +17,19 @@ def main():
         portList.append(port.portName())
 
     app = QtWidgets.QApplication([])
-    """ui = None
-   if len (sys.argv) > 1:
-        ui = MainWindow(sys.argv[1])
-    else:
-        ui = MainWindow(6)"""
+    numOfJoints = 6
+    if len (sys.argv) > 1:
+        try:
+            numOfJoints = int(sys.argv[1])
+        except Exception as e:
+            print("Some error on argument", e)
+            exit(1)
 
-    ui = MainWindow(sys.argv[1] if len(sys.argv) > 1 else 6)
+    if numOfJoints != 6 and numOfJoints != 4:
+        print("Only 6 or 4 joints are supported as number of joints")
+        exit(1)
+
+    ui = MainWindow(numOfJoints)
     ui.setAvailablePortNames(portList)
 
     ui.show()
