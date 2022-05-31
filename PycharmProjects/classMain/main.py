@@ -1,7 +1,10 @@
+#!/usr/bin/env python3
+
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtSerialPort import QSerialPort, QSerialPortInfo
 
 from mainWindow import MainWindow
+import sys
 
 
 def main():
@@ -14,10 +17,13 @@ def main():
         portList.append(port.portName())
 
     app = QtWidgets.QApplication([])
-    #ui = uic.loadUi("manipulator.ui")
+    """ui = None
+   if len (sys.argv) > 1:
+        ui = MainWindow(sys.argv[1])
+    else:
+        ui = MainWindow(6)"""
 
-    #ui.comL.addItems(portList)
-    ui = MainWindow()
+    ui = MainWindow(sys.argv[1] if len(sys.argv) > 1 else 6)
     ui.setAvailablePortNames(portList)
 
     ui.show()
