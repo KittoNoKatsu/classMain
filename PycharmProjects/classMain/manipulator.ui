@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>590</height>
+    <width>848</width>
+    <height>654</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -50,19 +50,6 @@
      </rect>
     </property>
    </widget>
-   <widget class="QScrollBar" name="servoA">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>270</y>
-      <width>16</width>
-      <height>161</height>
-     </rect>
-    </property>
-    <property name="maximum">
-     <number>105</number>
-    </property>
-   </widget>
    <widget class="QPushButton" name="openFile">
     <property name="geometry">
      <rect>
@@ -74,173 +61,6 @@
     </property>
     <property name="text">
      <string>OPEN FILE</string>
-    </property>
-   </widget>
-   <widget class="QScrollBar" name="servoB">
-    <property name="geometry">
-     <rect>
-      <x>360</x>
-      <y>270</y>
-      <width>16</width>
-      <height>160</height>
-     </rect>
-    </property>
-    <property name="minimum">
-     <number>30</number>
-    </property>
-    <property name="maximum">
-     <number>94</number>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
-    </property>
-   </widget>
-   <widget class="QScrollBar" name="servoC">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>270</y>
-      <width>16</width>
-      <height>160</height>
-     </rect>
-    </property>
-    <property name="minimum">
-     <number>20</number>
-    </property>
-    <property name="maximum">
-     <number>80</number>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
-    </property>
-   </widget>
-   <widget class="QScrollBar" name="servoD">
-    <property name="geometry">
-     <rect>
-      <x>480</x>
-      <y>270</y>
-      <width>16</width>
-      <height>160</height>
-     </rect>
-    </property>
-    <property name="maximum">
-     <number>110</number>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
-    </property>
-   </widget>
-   <widget class="QScrollBar" name="servoE">
-    <property name="geometry">
-     <rect>
-      <x>540</x>
-      <y>270</y>
-      <width>16</width>
-      <height>160</height>
-     </rect>
-    </property>
-    <property name="minimum">
-     <number>10</number>
-    </property>
-    <property name="maximum">
-     <number>140</number>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
-    </property>
-   </widget>
-   <widget class="QScrollBar" name="servoF">
-    <property name="geometry">
-     <rect>
-      <x>600</x>
-      <y>270</y>
-      <width>16</width>
-      <height>160</height>
-     </rect>
-    </property>
-    <property name="maximum">
-     <number>145</number>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="A">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>440</y>
-      <width>47</width>
-      <height>13</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ServoA</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="B">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>440</y>
-      <width>47</width>
-      <height>13</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ServoB</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="C">
-    <property name="geometry">
-     <rect>
-      <x>410</x>
-      <y>440</y>
-      <width>47</width>
-      <height>13</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ServoC</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="D">
-    <property name="geometry">
-     <rect>
-      <x>470</x>
-      <y>440</y>
-      <width>47</width>
-      <height>13</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ServoD</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="E">
-    <property name="geometry">
-     <rect>
-      <x>530</x>
-      <y>440</y>
-      <width>47</width>
-      <height>13</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ServoE</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="F">
-    <property name="geometry">
-     <rect>
-      <x>590</x>
-      <y>440</y>
-      <width>47</width>
-      <height>13</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ServoF</string>
     </property>
    </widget>
    <widget class="QTextEdit" name="textEdit">
@@ -256,68 +76,16 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="valA">
+   <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>220</y>
-      <width>31</width>
-      <height>31</height>
+      <x>230</x>
+      <y>190</y>
+      <width>581</width>
+      <height>411</height>
      </rect>
     </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="valB">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>220</y>
-      <width>31</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="valC">
-    <property name="geometry">
-     <rect>
-      <x>410</x>
-      <y>220</y>
-      <width>31</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="valD">
-    <property name="geometry">
-     <rect>
-      <x>470</x>
-      <y>220</y>
-      <width>31</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="valE">
-    <property name="geometry">
-     <rect>
-      <x>530</x>
-      <y>220</y>
-      <width>31</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="valF">
-    <property name="geometry">
-     <rect>
-      <x>590</x>
-      <y>220</y>
-      <width>31</width>
-      <height>31</height>
-     </rect>
-    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout"/>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -325,8 +93,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>21</height>
+     <width>848</width>
+     <height>22</height>
     </rect>
    </property>
   </widget>
