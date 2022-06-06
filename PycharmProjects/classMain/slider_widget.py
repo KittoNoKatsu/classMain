@@ -10,3 +10,4 @@ class SLW(QWidget):
     def setLetter(self, l):
         self.L = l
         self.label.setText( "Servo " + self.L)
+#SET VALUE VALUE CHANGE

@@ -32,6 +32,12 @@ def main():
     ui = MainWindow(numOfJoints)
     ui.setAvailablePortNames(portList)
 
+    fabrica = WrapperFabric()
+    fabrica.addImplementation(PRLUARTWrapper)
+
+    ui.setWrappersFabric(fabrica)
+    ui.updateControls()
+
     ui.show()
     app.exec()
 
