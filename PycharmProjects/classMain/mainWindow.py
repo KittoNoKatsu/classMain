@@ -1,10 +1,15 @@
 from PyQt5 import QtWidgets, uic
-from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtCore import pyqtSlot, pyqtSignal
 from PyQt5.QtWidgets import QMainWindow
 from slider_widget import SLW
 
 
 class MainWindow(QMainWindow):
+
+
+    setData = pyqtSignal(str, int, name ="setData")
+
+
     def __init__(self, count):
         super().__init__()
         self.fab = None
@@ -20,8 +25,8 @@ class MainWindow(QMainWindow):
             self.singles.append(ss)
             # setData(letter, value) - pyqtSignal (char, int) of MainWindow
             # valueChanged(letter, value)  - pyqtSignal of SLW
-            self.setData(letter, value).connect(ss.onSetData(letter, value)) # onSetData - slot of SLW
-            ss.valueChanged(letter, value).connect(self.onVC(letter, value))  # onVC - slot of MainWindow
+            self.setData.connect(ss.onSetData) # onSetData - slot of SLW
+            ss.valueChanged.connect(self.onVC)  # onVC - slot of MainWindow
 
     def setAvailablePortNames(self, portNames):
         for i in portNames:
@@ -30,7 +35,7 @@ class MainWindow(QMainWindow):
     @pyqtSlot()
     def on_openB_clicked(self):
         print("port open called")
-        wrapper is selecte
+        #wrapper is selecte
         wrapperName = self.wrapperType.text
         portName = self.comL.text
         self.inst = self.fab.createWErapper("PRL_UART", portName)
@@ -39,7 +44,7 @@ class MainWindow(QMainWindow):
             return
             pass
         if not self.inst.isOpen():
-            inform user
+            #inform user
             self.inst = None
             return
 
@@ -49,22 +54,31 @@ class MainWindow(QMainWindow):
 
     @pyqtSlot()
     def on_closeB_clicked(self):
-            print("port close called")
+        print("port close called")
         if self.inst is None:
             return
 
-        disconnect
-        disconnect
-        self.inst.close()
-        self.inst = None
+        #disconnect
+        #disconnect
+        #self.inst.close()
+        #self.inst = None
 
     def setWrapperFabric(self, fab):
         self.fab = fab
 
     def updateControl(self):
         if self.fab is not None:
+            pass
             #for i in self.fab.getSupportedWrappers():
                 #self.wrapperType.addItem(i.getName())
-                ??portNames = self.fab.getWrapper("PRL_UART").getPortsList()
-                ??for p in portNames:
-                ??    self.comL.addItem("/dev/" + p)
+                #??portNames = self.fab.getWrapper("PRL_UART").getPortsList()
+                #??for p in portNames:
+                #??    self.comL.addItem("/dev/" + p)
+
+    @pyqtSlot(str, int)
+    def onVC(self, letter, val):
+        print("onVC", letter, "   ", val )
+
+    @pyqtSlot()
+    def updateControls(self):
+        pass
